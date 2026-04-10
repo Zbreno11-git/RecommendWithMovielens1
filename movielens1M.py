@@ -29,7 +29,7 @@ sns.set_style("whitegrid")
 sns.histplot(data['rating'], bins=5, color='lightgreen', edgecolor='black', discrete=True)
 plt.xlabel('Rating')
 plt.ylabel('Count')
-#plt.show()
+#plt.savefig()
 
     # Barplot top 10 movies by rating
 top_10 = (data.groupby('title')['rating']
@@ -45,7 +45,7 @@ plt.ylabel('Movie')
 plt.title('Top 10 Movies')
 plt.xlim(top_10['mean'].min() - 0.1, top_10['mean'].max() + 0.1)
 plt.tight_layout()
-#plt.show()
+#plt.savefig()
 
     #  Creating a model
 from sklearn.linear_model import LinearRegression
